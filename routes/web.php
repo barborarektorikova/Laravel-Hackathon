@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/importdata', 'ImportController@index');
+// Route::get('/importdata', 'ImportController@index');
+
+Route::get('/main', 'OwnersController@index');
