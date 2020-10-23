@@ -14,4 +14,5 @@ class AnimalsController extends Controller
         // dd($animals[0]);
         return view('index',compact('animals'));
     }
-}
+
+    

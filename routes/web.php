@@ -19,4 +19,5 @@ Route::get('/', function () {
 
 // Route::get('/importdata', 'ImportController@index');
 
-Route::get('/main', 'OwnersController@index');
+Route::get('/', 'OwnersController@index')->name('index');
+Route::get('/searchresults', 'OwnersController@search')->name('search');
