@@ -15,13 +15,17 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
+
             $table->unsignedBigInteger('owner_id');
             $table->unsignedBigInteger('doctor_id');
-            $table->string('species');
-            $table->integer('age');
-            $table->string('breed');
-            $table->integer('weight');
-            $table->string('photo');
+            $table->string('name');
+            $table->string('species')->nullable();
+            $table->integer('age')->nullable();
+            $table->string('breed')->nullable();
+            $table->integer('weight')->nullable();
+            $table->string('photo')->nullable();
+
+            $table->timestamps();
         });
     }
 

@@ -17,9 +17,9 @@ class CreateOwnersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('surname');
-            $table->string('home_address');
-            $table->string('email');
-            $table->string('phone');
+            $table->string('home_address')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }
